@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@nestjs/bull": "^10.2.3",
+    "bull": "^4.16.4"
+  }
+}

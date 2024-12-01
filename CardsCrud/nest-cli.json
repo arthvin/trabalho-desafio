@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/CRUD/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/CRUD/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/CRUD",
+  "projects": {
+    "CRUD": {
+      "type": "application",
+      "root": "apps/CRUD",
+      "entryFile": "main",
+      "sourceRoot": "apps/CRUD/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/CRUD/tsconfig.app.json"
+      }
+    },
+    "rmq-process": {
+      "type": "application",
+      "root": "apps/rmq-process",
+      "entryFile": "main",
+      "sourceRoot": "apps/rmq-process/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/rmq-process/tsconfig.app.json"
+      }
+    },
+    "notification_queue": {
+      "type": "application",
+      "root": "apps/notification_queue",
+      "entryFile": "main",
+      "sourceRoot": "apps/notification_queue/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/notification_queue/tsconfig.app.json"
+      }
+    }
+  }
+}
